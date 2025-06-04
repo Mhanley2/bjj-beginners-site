@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BJJ for Beginners</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Welcome to BJJ for Beginners</h1>
-    <p>Your journey starts here.</p>
+    <h1>BJJ for Beginners</h1>
+    <button id="toggleTheme">Toggle Light/Dark Mode</button>
   </header>
 
   <main>
-    <button id="techButton">Click for a beginner technique</button>
-    <p id="techniqueDisplay"></p>
+    <h2>Start Your Journey</h2>
+    <section class="topics-grid">
+      <div class="topic-card">
+        <img src="images/guard.png" alt="Closed Guard">
+        <h3>Closed Guard</h3>
+        <p>A fundamental position to learn control and setup attacks.</p>
+        <p><strong>Level:</strong> Beginner</p>
+      </div>
+
+      <div class="topic-card">
+        <img src="images/escape.png" alt="Bridge Escape">
+        <h3>Bridge Escape</h3>
+        <p>Use your hips to escape mount — one of the first escapes to learn.</p>
+        <p><strong>Level:</strong> Beginner</p>
+      </div>
+
+      <div class="topic-card">
+        <img src="images/shrimp.png" alt="Hip Escape">
+        <h3>Hip Escape (Shrimp)</h3>
+        <p>Crucial movement for regaining guard or creating space.</p>
+        <p><strong>Level:</strong> Beginner</p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>Created by Martin | Questions? Email: <a href="mailto:martin@example.com">martin@example.com</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-

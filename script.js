@@ -1,14 +1,13 @@
-const techniques = [
-    "Hip Escape (Shrimping)",
-    "Bridge and Roll Escape",
-    "Closed Guard",
-    "Scissor Sweep",
-    "Rear Naked Choke",
-  ];
+// Dark mode toggle
+document.getElementById("toggleTheme").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
   
-  document.getElementById("techButton").addEventListener("click", function () {
-    const randomIndex = Math.floor(Math.random() * techniques.length);
-    const technique = techniques[randomIndex];
-    document.getElementById("techniqueDisplay").textContent = `Try: ${technique}`;
+  // Card flip interaction
+  const cards = document.querySelectorAll(".topic-card");
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
   });
   

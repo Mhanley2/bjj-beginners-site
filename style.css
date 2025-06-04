@@ -1,21 +1,90 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: sans-serif;
     margin: 0;
-    padding: 2rem;
-    background-color: #f4f4f4;
+    padding: 0;
+    background-color: #fff;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
   }
   
   header {
     background-color: #20232a;
     color: white;
-    padding: 1rem 0;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
   }
   
   button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Grid layout for technique cards */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .topic-card {
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .topic-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .topic-card.flipped {
+    background-color: #ccc;
+    transform: rotateY(180deg);
+  }
+  
+  .topic-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 600px) {
+    .topics-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .topics-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  /* Dark mode */
+  .dark {
+    background-color: #111;
+    color: #eee;
+  }
+  
+  .dark .topic-card {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
   }
   
