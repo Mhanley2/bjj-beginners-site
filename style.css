@@ -1,13 +1,14 @@
-/* General styles */
+/* Base */
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
     background-color: #fff;
     color: #222;
+    line-height: 1.6;
     transition: background 0.3s, color 0.3s;
   }
   
+  /* Header */
   header {
     background-color: #20232a;
     color: white;
@@ -15,59 +16,70 @@ body {
     text-align: center;
   }
   
+  header h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  
   button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
+    font-size: 1rem;
     cursor: pointer;
   }
   
+  /* Section title */
   h2 {
     text-align: center;
     margin-top: 2rem;
+    font-size: 1.8rem;
   }
   
-  /* Grid layout for technique cards */
+  /* Technique grid */
   .topics-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
   .topic-card {
-    background-color: #eee;
+    background-color: #fefefe;
     padding: 1rem;
     border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
     cursor: pointer;
   }
   
   .topic-card:hover {
-    transform: scale(1.02);
-  }
-  
-  .topic-card.flipped {
-    background-color: #ccc;
-    transform: rotateY(180deg);
+    transform: translateY(-5px);
   }
   
   .topic-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 6px;
+    margin-bottom: 1rem;
   }
   
-  /* Responsive design */
-  @media (min-width: 600px) {
-    .topics-grid {
-      grid-template-columns: 1fr 1fr;
-    }
+  h3 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1.2rem;
+    color: #333;
   }
   
-  @media (min-width: 900px) {
-    .topics-grid {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
   }
   
   /* Dark mode */
@@ -79,12 +91,5 @@ body {
   .dark .topic-card {
     background-color: #333;
     color: #fff;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    margin-top: 2rem;
   }
   
